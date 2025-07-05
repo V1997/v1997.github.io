@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Placeholder Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generate Placeholder Images for Portfolio</h1>
+    <p>Click the buttons below to generate placeholder images for your portfolio website.</p>
+    
+    <div class="image-container">
+        <h3>Profile Image (300x300)</h3>
+        <canvas id="profileCanvas" width="300" height="300"></canvas>
+        <br>
+        <button onclick="generateProfileImage()">Generate Profile Image</button>
+        <button onclick="downloadImage('profileCanvas', 'profile.jpg')">Download Profile Image</button>
+    </div>
+    
+    <div class="image-container">
+        <h3>About Image (400x300)</h3>
+        <canvas id="aboutCanvas" width="400" height="300"></canvas>
+        <br>
+        <button onclick="generateAboutImage()">Generate About Image</button>
+        <button onclick="downloadImage('aboutCanvas', 'about.jpg')">Download About Image</button>
+    </div>
+    
+    <div class="image-container">
+        <h3>Project Images (400x250)</h3>
+        <canvas id="project1Canvas" width="400" height="250"></canvas>
+        <br>
+        <button onclick="generateProjectImage('project1Canvas', 'E-Commerce Platform')">Generate Project 1</button>
+        <button onclick="downloadImage('project1Canvas', 'project1.jpg')">Download Project 1</button>
+        
+        <br><br>
+        <canvas id="project2Canvas" width="400" height="250"></canvas>
+        <br>
+        <button onclick="generateProjectImage('project2Canvas', 'Task Management App')">Generate Project 2</button>
+        <button onclick="downloadImage('project2Canvas', 'project2.jpg')">Download Project 2</button>
+        
+        <br><br>
+        <canvas id="project3Canvas" width="400" height="250"></canvas>
+        <br>
+        <button onclick="generateProjectImage('project3Canvas', 'Weather Dashboard')">Generate Project 3</button>
+        <button onclick="downloadImage('project3Canvas', 'project3.jpg')">Download Project 3</button>
+    </div>
+
+    <script>
+        function generateProfileImage() {
+            const canvas = document.getElementById('profileCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, 300, 300);
+            gradient.addColorStop(0, '#2563eb');
+            gradient.addColorStop(1, '#06b6d4');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 300, 300);
+            
+            // Profile icon
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.beginPath();
+            ctx.arc(150, 120, 50, 0, 2 * Math.PI);
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(150, 200, 80, 0, Math.PI);
+            ctx.fill();
+            
+            // Text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('V1997', 150, 280);
+        }
+        
+        function generateAboutImage() {
+            const canvas = document.getElementById('aboutCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 300);
+            gradient.addColorStop(0, '#f8fafc');
+            gradient.addColorStop(1, '#e2e8f0');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 300);
+            
+            // Decorative elements
+            ctx.fillStyle = '#2563eb';
+            ctx.fillRect(50, 50, 100, 100);
+            ctx.fillRect(250, 150, 80, 80);
+            
+            ctx.fillStyle = '#06b6d4';
+            ctx.fillRect(300, 50, 60, 60);
+            ctx.fillRect(50, 200, 120, 60);
+            
+            // Text
+            ctx.fillStyle = '#1e293b';
+            ctx.font = 'bold 28px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('About Me', 200, 180);
+            
+            ctx.font = '16px Arial';
+            ctx.fillText('Professional Background', 200, 210);
+            ctx.fillText('Skills & Experience', 200, 230);
+        }
+        
+        function generateProjectImage(canvasId, projectName) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 250);
+            gradient.addColorStop(0, '#1e293b');
+            gradient.addColorStop(1, '#334155');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 250);
+            
+            // Code-like elements
+            ctx.fillStyle = '#10b981';
+            ctx.font = '12px monospace';
+            ctx.textAlign = 'left';
+            
+            const lines = [
+                'function ' + projectName.toLowerCase().replace(/\s+/g, '') + '() {',
+                '  const app = new Application();',
+                '  app.initialize();',
+                '  return app;',
+                '}',
+                '',
+                '// Modern web development',
+                '// Clean architecture',
+                '// User experience focused'
+            ];
+            
+            lines.forEach((line, index) => {
+                ctx.fillText(line, 30, 40 + (index * 20));
+            });
+            
+            // Project name overlay
+            ctx.fillStyle = 'rgba(37, 99, 235, 0.9)';
+            ctx.fillRect(0, 200, 400, 50);
+            
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 18px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(projectName, 200, 230);
+        }
+        
+        function downloadImage(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/jpeg', 0.8);
+            link.click();
+        }
+        
+        // Generate all images on page load
+        window.onload = function() {
+            generateProfileImage();
+            generateAboutImage();
+            generateProjectImage('project1Canvas', 'E-Commerce Platform');
+            generateProjectImage('project2Canvas', 'Task Management App');
+            generateProjectImage('project3Canvas', 'Weather Dashboard');
+        };
+    </script>
+</body>
+</html> 
