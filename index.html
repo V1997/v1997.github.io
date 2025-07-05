@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="V1997 - Professional Portfolio | Software Developer, Web Developer, and Technology Enthusiast">
-    <meta name="keywords" content="portfolio, developer, software engineer, web development, programming">
+    <meta name="description" content="V1997 - Software Developer & Technology Enthusiast | Creating innovative digital solutions with modern technologies">
+    <meta name="keywords" content="portfolio, developer, software engineer, web development, programming, V1997">
     <meta name="author" content="V1997">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://v1997.github.io/">
-    <meta property="og:title" content="V1997 - Professional Portfolio">
-    <meta property="og:description" content="Software Developer, Web Developer, and Technology Enthusiast">
+    <meta property="og:title" content="V1997 - Software Developer & Technology Enthusiast">
+    <meta property="og:description" content="Creating innovative digital solutions with modern technologies. Let's build something amazing together.">
     <meta property="og:image" content="https://v1997.github.io/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://v1997.github.io/">
-    <meta property="twitter:title" content="V1997 - Professional Portfolio">
-    <meta property="twitter:description" content="Software Developer, Web Developer, and Technology Enthusiast">
+    <meta property="twitter:title" content="V1997 - Software Developer & Technology Enthusiast">
+    <meta property="twitter:description" content="Creating innovative digital solutions with modern technologies. Let's build something amazing together.">
     <meta property="twitter:image" content="https://v1997.github.io/images/og-image.jpg">
 
-    <title>V1997 - Professional Portfolio</title>
+    <title>V1997 - Software Developer & Technology Enthusiast</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -29,7 +29,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -59,67 +59,96 @@
                     <a href="#projects" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-actions">
+                <button class="view-toggle" id="viewToggle" title="Toggle Project View">
+                    <i class="fas fa-th-large"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+            <div class="hero-particles"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <div class="hero-text">
+                    <div class="hero-badge">
+                        <span>👋 Hello, I'm</span>
+                    </div>
                     <h1 class="hero-title">
-                        Hi, I'm <span class="highlight">V1997</span>
+                        <span class="hero-name">V1997</span>
+                        <span class="hero-subtitle">Software Developer & Technology Enthusiast</span>
                     </h1>
-                    <h2 class="hero-subtitle">Software Developer & Technology Enthusiast</h2>
                     <p class="hero-description">
-                        I create innovative digital solutions and bring ideas to life through code. 
-                        Passionate about clean architecture, user experience, and cutting-edge technologies.
+                        I create innovative digital solutions that bring ideas to life. 
+                        Passionate about clean architecture, exceptional user experiences, 
+                        and cutting-edge technologies that make a difference.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank">
-                            <i class="fas fa-download"></i> Download CV
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Let's Work Together</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-eye"></i>
+                            <span>View My Work</span>
                         </a>
                     </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-visual">
                     <div class="profile-container">
                         <div class="profile-image">
                             <img src="images/profile.jpg" alt="V1997 Profile" id="profile-img">
                         </div>
-                        <div class="floating-icons">
-                            <div class="icon-item" style="--delay: 0s">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <div class="icon-item" style="--delay: 1s">
+                        <div class="floating-elements">
+                            <div class="floating-icon" data-tech="React">
                                 <i class="fab fa-react"></i>
                             </div>
-                            <div class="icon-item" style="--delay: 2s">
+                            <div class="floating-icon" data-tech="Node.js">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <div class="floating-icon" data-tech="Python">
                                 <i class="fab fa-python"></i>
                             </div>
-                            <div class="icon-item" style="--delay: 3s">
-                                <i class="fab fa-node-js"></i>
+                            <div class="floating-icon" data-tech="JavaScript">
+                                <i class="fab fa-js"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <a href="#about">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <span>Scroll to explore</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
 
@@ -127,39 +156,66 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
+                <span class="section-badge">About Me</span>
+                <h2 class="section-title">Crafting Digital Experiences</h2>
+                <p class="section-subtitle">Passionate about creating meaningful solutions that make a difference</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Who I Am</h3>
-                    <p>
-                        I'm a passionate software developer with a strong foundation in modern web technologies 
-                        and a keen eye for creating intuitive user experiences. My journey in technology started 
-                        with curiosity and has evolved into a professional pursuit of excellence.
-                    </p>
-                    <p>
-                        I believe in writing clean, maintainable code and staying up-to-date with the latest 
-                        industry trends. When I'm not coding, you can find me exploring new technologies, 
-                        contributing to open-source projects, or sharing knowledge with the developer community.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h4>3+</h4>
-                            <p>Years Experience</p>
+                    <div class="about-intro">
+                        <h3>Who I Am</h3>
+                        <p>
+                            I'm a dedicated software developer with a passion for creating elegant, 
+                            user-centric solutions. My journey in technology began with curiosity 
+                            and has evolved into a professional pursuit of excellence in every line of code.
+                        </p>
+                        <p>
+                            I believe in writing clean, maintainable code and staying at the forefront 
+                            of industry trends. When I'm not coding, you'll find me exploring new technologies, 
+                            contributing to open-source projects, or sharing knowledge with the developer community.
+                        </p>
+                    </div>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Clean Code</h4>
+                                <p>Writing maintainable, scalable solutions</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>50+</h4>
-                            <p>Projects Completed</p>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>User-Focused</h4>
+                                <p>Creating experiences that users love</p>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>20+</h4>
-                            <p>Happy Clients</p>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Performance</h4>
+                                <p>Optimizing for speed and efficiency</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="images/about.jpg" alt="About V1997">
+                <div class="about-visual">
+                    <div class="about-image">
+                        <img src="images/about.jpg" alt="About V1997">
+                        <div class="about-overlay">
+                            <div class="overlay-content">
+                                <h4>Ready to collaborate?</h4>
+                                <p>Let's build something amazing together</p>
+                                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,35 +225,43 @@
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">My professional journey</p>
+                <span class="section-badge">Experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">My path in software development and technology</p>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>Senior Software Developer</h3>
-                            <span class="company">Tech Company Inc.</span>
-                            <span class="period">2022 - Present</span>
+                            <div class="timeline-meta">
+                                <span class="company">Tech Company Inc.</span>
+                                <span class="period">2022 - Present</span>
+                            </div>
                         </div>
                         <p>
-                            Leading development of scalable web applications using React, Node.js, and cloud technologies. 
-                            Mentoring junior developers and implementing best practices for code quality and performance.
+                            Leading development of scalable web applications using modern technologies. 
+                            Mentoring junior developers and implementing best practices for code quality 
+                            and performance optimization.
                         </p>
                         <div class="tech-stack">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">AWS</span>
                             <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AWS</span>
                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>Full Stack Developer</h3>
-                            <span class="company">StartupXYZ</span>
-                            <span class="period">2021 - 2022</span>
+                            <div class="timeline-meta">
+                                <span class="company">StartupXYZ</span>
+                                <span class="period">2021 - 2022</span>
+                            </div>
                         </div>
                         <p>
                             Developed and maintained multiple web applications from concept to deployment. 
@@ -212,11 +276,14 @@
                     </div>
                 </div>
                 <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>Junior Developer</h3>
-                            <span class="company">Digital Agency</span>
-                            <span class="period">2020 - 2021</span>
+                            <div class="timeline-meta">
+                                <span class="company">Digital Agency</span>
+                                <span class="period">2020 - 2021</span>
+                            </div>
                         </div>
                         <p>
                             Started my professional journey building responsive websites and learning modern 
@@ -238,77 +305,118 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                <span class="section-badge">Projects</span>
+                <h2 class="section-title">Featured Work</h2>
+                <p class="section-subtitle">A showcase of my recent projects and achievements</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
+            <div class="projects-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="api">APIs</button>
+                </div>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card featured" data-category="web">
                     <div class="project-image">
                         <img src="images/projects/project1.jpg" alt="E-Commerce Platform">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.</p>
+                        <div class="project-header">
+                            <h3>E-Commerce Platform</h3>
+                            <span class="project-badge featured">Featured</span>
+                        </div>
+                        <p>A comprehensive e-commerce solution with payment integration, inventory management, 
+                           and an intuitive admin dashboard. Built with modern technologies for scalability.</p>
                         <div class="project-tech">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">MongoDB</span>
                             <span class="tech-tag">Stripe</span>
                         </div>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-sm">View Case Study</a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="web">
                     <div class="project-image">
                         <img src="images/projects/project2.jpg" alt="Task Management App">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Task Management App</h3>
-                        <p>A collaborative task management application with real-time updates, team collaboration, and progress tracking.</p>
+                        <div class="project-header">
+                            <h3>Task Management App</h3>
+                        </div>
+                        <p>A collaborative task management application with real-time updates, team collaboration, 
+                           and progress tracking features.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Vue.js</span>
                             <span class="tech-tag">Firebase</span>
                             <span class="tech-tag">Vuex</span>
                             <span class="tech-tag">Vuetify</span>
                         </div>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-sm">View Case Study</a>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-category="api">
                     <div class="project-image">
                         <img src="images/projects/project3.jpg" alt="Weather Dashboard">
                         <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" title="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.</p>
+                        <div class="project-header">
+                            <h3>Weather Dashboard</h3>
+                        </div>
+                        <p>A beautiful weather application with location-based forecasts, interactive maps, 
+                           and detailed weather analytics.</p>
                         <div class="project-tech">
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">OpenWeather API</span>
                             <span class="tech-tag">Chart.js</span>
                             <span class="tech-tag">CSS3</span>
                         </div>
+                        <div class="project-footer">
+                            <a href="#" class="btn btn-sm">View Case Study</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="projects-cta">
                 <a href="https://github.com/V1997" class="btn btn-primary" target="_blank">
-                    <i class="fab fa-github"></i> View More on GitHub
+                    <i class="fab fa-github"></i>
+                    <span>View More on GitHub</span>
                 </a>
             </div>
         </div>
@@ -318,8 +426,9 @@
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Skills</h2>
-                <p class="section-subtitle">Technologies I work with</p>
+                <span class="section-badge">Skills</span>
+                <h2 class="section-title">Technologies I Work With</h2>
+                <p class="section-subtitle">A comprehensive toolkit for building modern applications</p>
             </div>
             <div class="skills-content">
                 <div class="skills-category">
@@ -427,8 +536,9 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together</p>
+                <span class="section-badge">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life? Let's start a conversation</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -460,16 +570,16 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/V1997" target="_blank" class="social-link">
+                        <a href="https://github.com/V1997" target="_blank" class="social-link" title="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://linkedin.com/in/v1997" target="_blank" class="social-link">
+                        <a href="https://linkedin.com/in/v1997" target="_blank" class="social-link" title="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="https://twitter.com/v1997" target="_blank" class="social-link">
+                        <a href="https://twitter.com/v1997" target="_blank" class="social-link" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://dev.to/v1997" target="_blank" class="social-link">
+                        <a href="https://dev.to/v1997" target="_blank" class="social-link" title="Dev.to">
                             <i class="fab fa-dev"></i>
                         </a>
                     </div>
@@ -489,7 +599,8 @@
                             <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Message</span>
                         </button>
                     </form>
                 </div>
@@ -501,14 +612,31 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 V1997. All rights reserved.</p>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>V1997</h3>
+                        <p>Creating innovative digital solutions with passion and precision.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4>Navigation</h4>
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Connect</h4>
+                            <a href="https://github.com/V1997" target="_blank">GitHub</a>
+                            <a href="https://linkedin.com/in/v1997" target="_blank">LinkedIn</a>
+                            <a href="https://twitter.com/v1997" target="_blank">Twitter</a>
+                            <a href="https://dev.to/v1997" target="_blank">Dev.to</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 V1997. All rights reserved.</p>
+                    <p>Built with ❤️ and lots of ☕</p>
                 </div>
             </div>
         </div>
